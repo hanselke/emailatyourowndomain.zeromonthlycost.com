@@ -1,9 +1,17 @@
-/*
-	Highlights by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+// code for appearing maincta
 
+var scrollfired = false;
+$(window).scroll(function() {
+    //console.log($(this).scrollTop());
+    if ($(this).scrollTop() > 1200 && scrollfired === false){
+        $('#maincta').toggle();
+        scrollfired = true;
+    }else{
+
+     }
+ });
+
+// main.js code
 (function($) {
 
 	skel.breakpoints({
