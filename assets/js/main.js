@@ -4,7 +4,8 @@ var scrollfired = false;
 $(window).scroll(function() {
     //console.log($(this).scrollTop());
     if ($(this).scrollTop() > 1200 && scrollfired === false){
-        $('#maincta').toggle();
+        // $('#maincta').toggle();
+        $('#maincta').fadeIn()
         scrollfired = true;
     }else{
 
