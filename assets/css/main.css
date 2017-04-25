@@ -1,3 +1,21 @@
+	.disqus-loading
+			{
+				font-size: 26px;
+				font-weight: 300;
+				color: #777;
+				padding: 1.25rem 0; /* 20 */
+			}
+	.disqus-loading.is-hidden { display: none; }
+
+	.popzone
+			{
+				background-color: #fff;
+				box-shadow: 0 4px 4px rgba( 0, 0, 0, .1 );
+				border-radius: 3px;
+				padding: 1.25rem; /* 20 */
+			}
+
+
 	.maincta {
 		position:fixed !important;
    		bottom:5px;

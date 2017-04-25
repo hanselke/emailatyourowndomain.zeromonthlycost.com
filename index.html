@@ -20,6 +20,8 @@
 		  ga('send', 'pageview');
 
 		</script>
+
+
 	</head>
 	<body>
 	<!-- Main call to action -->
@@ -523,24 +525,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		<form class="align-center" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="SDQKT65H5GS6Y"><input type="image" src="https://www.paypalobjects.com/en_GB/SG/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1"></form>	
 		</div>
 
-					<div id="disqus_thread"></div>
-				<script>
-
-
-				var disqus_config = function () {
-				this.page.url = "https://emailatyourdomain.zeromonthlycost.com";  // Replace PAGE_URL with your page's canonical URL variable
-				this.page.identifier = "emailatyourdomain"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-				};
-
-				(function() { // DON'T EDIT BELOW THIS LINE
-				var d = document, s = d.createElement('script');
-				s.src = 'https://zeromonthlycost.disqus.com/embed.js';
-				s.setAttribute('data-timestamp', +new Date());
-				(d.head || d.body).appendChild(s);
-				})();
-				</script>
-				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-				</div>
+			
+		<div id="disqus popzone"></div>
+			
 
 				<footer>
 				
@@ -565,6 +552,34 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<!--
+			NO DEPENDENCIES disqus lazy loader(IE9+ support)
+				-->
 
+			<script src="assets/js/disqusloader.js"></script>
+			<script>
+				
+				disqusLoader( '.disqus',
+				{
+					scriptUrl:		'//zeromonthlycost.disqus.com/embed.js',
+					disqusConfig:	function()
+					{
+						this.page.identifier 	= 'disqus-lazyload-demo';
+						this.page.url			= 'https://emailatyourowndomain.zeromonthlycost.com';
+						this.page.title			= 'Lazy-Loading Disqus Comments';
+						this.callbacks.onReady	= [function()
+						{
+							var el = document.querySelector( '.disqus-loading' );
+							if( el.classList )
+								el.classList.add( 'is-hidden' ); // IE 10+
+							else
+								el.className += ' ' + 'is-hidden'; // IE 8-9
+						}];
+					}
+				});
+
+				
+			</script>
+			
 	</body>
 </html>
